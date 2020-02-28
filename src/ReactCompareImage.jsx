@@ -45,6 +45,7 @@ const defaultProps = {
 function ReactCompareImage(props) {
   const {
     aspectRatio,
+    classNames,
     handle,
     handleSize,
     hover,
@@ -420,7 +421,7 @@ function ReactCompareImage(props) {
           src={leftImage}
           style={styles.leftImage}
         />
-        <div style={styles.slider}>
+        <div style={styles.slider} className={classNames && classNames.slider}>
           <div style={styles.line} />
           {handle ? (
             <div style={styles.handleCustom}>{handle}</div>
